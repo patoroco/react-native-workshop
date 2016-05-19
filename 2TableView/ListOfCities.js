@@ -21,8 +21,14 @@ export default React.createClass({
   },
 
   _renderRow(rowData) {
+    const navigationPayload = {
+      name: 'detail',
+      'cityName': rowData.cityName,
+      'wikiURL': rowData.wikiURL,
+    }
+
     return (
-      <TouchableHighlight onPress={() => this.props.navigator.push({name: 'detail', 'cityName': rowData.cityName, 'wikiURL': rowData.wikiURL})}>
+      <TouchableHighlight onPress={() => this.props.navigator.push(navigationPayload)}>
         {this._rowBody(rowData.cityName)}
       </TouchableHighlight>
     )

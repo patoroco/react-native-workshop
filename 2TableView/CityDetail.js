@@ -7,12 +7,6 @@ import {
 
 
 export default React.createClass({
-  getDefaultProps() {
-    return {
-      cityName: 'placeholder',
-    }
-  },
-
   render() {
     return (
       <WebView
