@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Image,
   Text,
-  View,
+  WebView,
 } from 'react-native'
 
 
@@ -15,11 +15,11 @@ export default React.createClass({
 
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={{fontSize: 50}}>
-          {this.props.cityName}
-        </Text>
-      </View>
+      <WebView
+        style={{flex:1}}
+        scalesPageToFit={true}
+        source={{uri: this.props.wikiURL}}
+      />
     )
   }
 })

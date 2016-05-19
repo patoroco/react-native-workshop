@@ -9,10 +9,10 @@ import {
 
 
 const cities = [
-  "Aguilar de Campoó",
-  "Santander",
-  "Valladolid",
-  "Madrid",
+  {cityName: "Aguilar de Campoó", wikiURL: "https://es.wikipedia.org/wiki/Aguilar_de_Campoo"},
+  {cityName: "Santander", wikiURL: "https://es.wikipedia.org/wiki/Santander_(Espa%C3%B1a)"},
+  {cityName: "Valladolid", wikiURL: "https://es.wikipedia.org/wiki/Valladolid"},
+  {cityName: "Madrid", wikiURL: "https://es.wikipedia.org/wiki/Madrid"},
 ]
 
 
@@ -26,8 +26,8 @@ export default React.createClass({
 
   _renderRow(rowData) {
     return (
-      <TouchableHighlight onPress={() => this.props.navigator.push({name: 'detail', 'cityName': rowData})}>
-        {this._rowBody(rowData)}
+      <TouchableHighlight onPress={() => this.props.navigator.push({name: 'detail', 'cityName': rowData.cityName, 'wikiURL': rowData.wikiURL})}>
+        {this._rowBody(rowData.cityName)}
       </TouchableHighlight>
     )
   },
