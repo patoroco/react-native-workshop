@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 
 import ListOfCities from './ListOfCities'
+import CityDetail from './CityDetail'
 
 export default React.createClass({
   render() {
@@ -20,6 +21,8 @@ export default React.createClass({
   _routeMapper(route, navigator) {
     if (route.name === 'cities') {
       return <ListOfCities />
+    } else if (route.name === 'detail') {
+      return <CityDetail />
     }
 
     return null
