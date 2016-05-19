@@ -15,8 +15,8 @@ export default React.createClass({
 
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'green'}}>
-        <Text>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={{fontSize: 50}}>
           {this.props.cityName}
         </Text>
       </View>
