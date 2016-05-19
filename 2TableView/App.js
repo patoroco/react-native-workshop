@@ -18,7 +18,7 @@ export default React.createClass({
         initialRoute={{name: 'cities'}}
         configureScene={(route) => Navigator.SceneConfigs.FloatFromRight}
         renderScene={this._routeMapper}
-        navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouter} />}
+        navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouter} style={{backgroundColor: '#FABADA', alignItems: 'center', justifyContent: 'center'}} />}
       />
     )
   },

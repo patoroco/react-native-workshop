@@ -52,7 +52,7 @@ export default React.createClass({
   render() {
     return (
       <ListView
-        style={{ flex: 1, backgroundColor: 'gray', paddingTop: 20 }}
+        style={{ flex: 1, backgroundColor: 'gray', paddingTop: 64 }}
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}
       />

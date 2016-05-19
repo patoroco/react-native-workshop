@@ -9,8 +9,10 @@ export default {
   LeftButton: function(route, navigator, index, navState) {
     if (route.name === 'detail') {
       return (
-        <TouchableHighlight onPress={() => navigator.pop()}>
-          <Text>Back</Text>
+        <TouchableHighlight onPress={() => navigator.pop()} style={{ padding: 10}}>
+          <Text style={{fontWeight: 'bold', color: 'white'}}>
+            Back
+          </Text>
         </TouchableHighlight>
       )
     }
@@ -19,17 +21,21 @@ export default {
   },
 
   RightButton: function(route, navigator, index, navState) {
+    return null
   },
 
   Title: function(route, navigator, index, navState) {
+    let title = null
     if (route.name === 'detail') {
-      return (
-        <Text>
-          {route.cityName}
-        </Text>
-      )
+      title = route.cityName
+    } else if (route.name === 'cities') {
+      title = "Cities"
     }
 
-    return null
+    return (
+      <Text style={{ fontSize: 16, fontWeight: 'bold', marginTop: 10}}>
+        {title}
+      </Text>
+    )
   }
 }
