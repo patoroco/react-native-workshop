@@ -24,6 +24,10 @@ export default React.createClass({
   },
 
   _renderRow(rowData) {
+    return this._rowBody(rowData)
+  },
+
+  _rowBody(rowData) {
     return (
       <View
         style={{ backgroundColor: 'white', height: 50, flexDirection: 'row', alignItems: 'center'}}
