@@ -23,7 +23,9 @@ export default React.createClass({
 
   _renderRow(rowData) {
     return (
-      <Text>
+      <Text
+        style={{ backgroundColor: 'white', height: 40 }}
+      >
         {rowData}
       </Text>
     )
@@ -32,6 +34,7 @@ export default React.createClass({
   render() {
     return (
       <ListView
+        style={{ flex: 1, backgroundColor: 'gray', paddingTop: 20 }}
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}
       />
