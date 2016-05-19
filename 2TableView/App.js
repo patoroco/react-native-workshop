@@ -1,7 +1,9 @@
 import React from 'react';
 import {
+  Image,
   ListView,
   Text,
+  View,
 } from 'react-native';
 
 
@@ -23,11 +25,18 @@ export default React.createClass({
 
   _renderRow(rowData) {
     return (
-      <Text
-        style={{ backgroundColor: 'white', height: 40 }}
+      <View
+        style={{ backgroundColor: 'white', height: 50, flexDirection: 'row', alignItems: 'center'}}
       >
-        {rowData}
-      </Text>
+        <Image
+          source={require('./imgs/picniccode.jpg')}
+          style={{width: 30, height: 30, marginHorizontal: 10}}
+        />
+
+        <Text style={{flex: 1}}>
+          {rowData}
+        </Text>
+      </View>
     )
   },
 
