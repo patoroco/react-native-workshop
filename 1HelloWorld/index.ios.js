@@ -17,7 +17,7 @@ class HelloWorld extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Picnic Code 2016
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.ios.js
