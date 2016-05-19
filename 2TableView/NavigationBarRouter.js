@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Platform,
   StyleSheet,
   Text,
   TouchableHighlight,
@@ -42,7 +43,7 @@ export default {
     }
 
     return (
-      <Text style={styles.title}>
+      <Text numberOfLines={1} style={styles.title}>
         {title}
       </Text>
     )

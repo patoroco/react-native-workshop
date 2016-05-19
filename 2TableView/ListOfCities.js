@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Image,
   ListView,
+  Platform,
   StyleSheet,
   Text,
   TouchableHighlight,
@@ -53,11 +54,14 @@ export default React.createClass({
 
   render() {
     return (
+      <View style={{flex: 1}}>
+      {this.props.toolbar}
       <ListView
         style={styles.tableView}
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}
       />
+      </View>
     )
   },
 })
@@ -68,7 +72,7 @@ const styles = StyleSheet.create({
   tableView: {
     flex: 1,
     backgroundColor: 'gray',
-    paddingTop: 64,
+    marginTop: Platform.OS === 'ios' ? 60 : 0,
   },
 
   row: {
