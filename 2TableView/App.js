@@ -3,6 +3,7 @@ import {
   Image,
   ListView,
   Text,
+  TouchableHighlight,
   View,
 } from 'react-native';
 
@@ -24,7 +25,11 @@ export default React.createClass({
   },
 
   _renderRow(rowData) {
-    return this._rowBody(rowData)
+    return (
+      <TouchableHighlight onPress={() => alert("Touch!")}>
+        {this._rowBody(rowData)}
+      </TouchableHighlight>
+    )
   },
 
   _rowBody(rowData) {
