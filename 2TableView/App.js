@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import {
   Navigator,
-  Text,
-} from 'react-native';
+} from 'react-native'
 
 import ListOfCities from './ListOfCities'
 import CityDetail from './CityDetail'
+import NavigationBarRouter from './NavigationBarRouter'
 
 export default React.createClass({
 
@@ -35,33 +35,3 @@ export default React.createClass({
     return null
   }
 })
-
-
-const NavigationBarRouter = {
-  LeftButton: function(route, navigator, index, navState) {
-    if (route.name === 'detail') {
-      return (
-        <Text>
-          Back
-        </Text>
-      )
-    }
-
-    return null
-  },
-
-  RightButton: function(route, navigator, index, navState) {
-  },
-
-  Title: function(route, navigator, index, navState) {
-    if (route.name === 'detail') {
-      return (
-        <Text>
-          {route.cityName}
-        </Text>
-      )
-    }
-
-    return null
-  }
-}
