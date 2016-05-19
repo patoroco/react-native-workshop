@@ -24,7 +24,7 @@ export default React.createClass({
     if (route.name === 'cities') {
       return <ListOfCities navigator={_navigator} />
     } else if (route.name === 'detail') {
-      return <CityDetail navigator={_navigator} />
+      return <CityDetail navigator={_navigator} cityName={route.cityName} />
     }
 
     return null
