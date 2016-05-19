@@ -19,10 +19,12 @@ export default React.createClass({
   },
 
   _routeMapper(route, navigator) {
+    _navigator = navigator
+
     if (route.name === 'cities') {
-      return <ListOfCities />
+      return <ListOfCities navigator={_navigator} />
     } else if (route.name === 'detail') {
-      return <CityDetail />
+      return <CityDetail navigator={_navigator} />
     }
 
     return null

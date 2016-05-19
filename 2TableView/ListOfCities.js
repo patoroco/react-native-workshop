@@ -26,7 +26,7 @@ export default React.createClass({
 
   _renderRow(rowData) {
     return (
-      <TouchableHighlight onPress={() => alert("Touch!")}>
+      <TouchableHighlight onPress={() => this.props.navigator.push({name: 'detail'})}>
         {this._rowBody(rowData)}
       </TouchableHighlight>
     )
