@@ -1,16 +1,23 @@
 import React from 'react'
 import {
+  StyleSheet,
   Text,
   TouchableHighlight,
   View,
 } from 'react-native'
 
 export default {
+
   LeftButton: function(route, navigator, index, navState) {
     if (route.name === 'detail') {
       return (
-        <TouchableHighlight onPress={() => navigator.pop()} style={{ padding: 10}}>
-          <Text style={{fontWeight: 'bold', color: 'white'}}>
+        <TouchableHighlight
+          onPress={() => navigator.pop()}
+          style={styles.leftButton}
+        >
+          <Text
+            style={styles.leftButtonText}
+          >
             Back
           </Text>
         </TouchableHighlight>
@@ -20,9 +27,11 @@ export default {
     return null
   },
 
+
   RightButton: function(route, navigator, index, navState) {
     return null
   },
+
 
   Title: function(route, navigator, index, navState) {
     let title = null
@@ -33,9 +42,28 @@ export default {
     }
 
     return (
-      <Text style={{ fontSize: 16, fontWeight: 'bold', marginTop: 10}}>
+      <Text style={styles.title}>
         {title}
       </Text>
     )
   }
 }
+
+
+const styles = StyleSheet.create({
+  leftButton: {
+    padding: 10,
+  },
+
+  leftButtonText: {
+    fontWeight: 'bold',
+    color: 'white',
+  },
+
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginTop: 10,
+    color: 'white',
+  },
+})

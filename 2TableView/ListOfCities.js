@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Image,
   ListView,
+  StyleSheet,
   Text,
   TouchableHighlight,
   View,
@@ -30,11 +31,11 @@ export default React.createClass({
   _rowBody(rowData) {
     return (
       <View
-        style={{ backgroundColor: 'white', height: 50, flexDirection: 'row', alignItems: 'center'}}
+        style={styles.row}
       >
         <Image
           source={require('./imgs/picniccode.jpg')}
-          style={{width: 30, height: 30, marginHorizontal: 10}}
+          style={styles.image}
         />
 
         <Text style={{flex: 1}}>
@@ -47,10 +48,34 @@ export default React.createClass({
   render() {
     return (
       <ListView
-        style={{ flex: 1, backgroundColor: 'gray', paddingTop: 64 }}
+        style={styles.tableView}
         dataSource={this.state.dataSource}
         renderRow={this._renderRow}
       />
     )
   },
+})
+
+
+
+const styles = StyleSheet.create({
+  tableView: {
+    flex: 1,
+    backgroundColor: 'gray',
+    paddingTop: 64,
+  },
+
+  row: {
+    backgroundColor: 'white',
+    height: 50,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+
+  image: {
+    width: 30,
+    height: 30,
+    marginHorizontal: 10,
+  },
+
 })

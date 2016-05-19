@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   Navigator,
+  StyleSheet,
 } from 'react-native'
 
 import ListOfCities from './ListOfCities'
@@ -18,7 +19,7 @@ export default React.createClass({
         initialRoute={{name: 'cities'}}
         configureScene={(route) => Navigator.SceneConfigs.FloatFromRight}
         renderScene={this._routeMapper}
-        navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouter} style={{backgroundColor: '#FABADA', alignItems: 'center', justifyContent: 'center'}} />}
+        navigationBar={<Navigator.NavigationBar routeMapper={NavigationBarRouter} style={styles.navigationBar} />}
       />
     )
   },
@@ -34,4 +35,15 @@ export default React.createClass({
 
     return null
   }
+})
+
+
+const styles = StyleSheet.create({
+
+  navigationBar: {
+    backgroundColor: '#FABADA',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+
 })
