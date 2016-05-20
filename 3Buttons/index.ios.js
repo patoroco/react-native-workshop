@@ -14,6 +14,8 @@ import {
 
 import APIClient from './APIClient'
 
+const Sound = require('react-native-sound');
+
 
 class Buttons extends Component {
   constructor(props) {
@@ -26,6 +28,18 @@ class Buttons extends Component {
     client.get('ip')
       .then(json => this.setState({ ip: json.origin }))
       .catch((error) => console.error(error))
+      this.playSound()
+  }
+
+  playSound() {
+    var applause = new Sound(
+      'sounds/applause.mp3',
+      Sound.MAIN_BUNDLE,
+      (error) => {
+        if (error) { console.error('failed to load the sound', error) }
+        else { applause.play() }
+      }
+    )
   }
 
   render() {
