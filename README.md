@@ -1,6 +1,23 @@
 # react-native-workshop
 
-- https://www.gui.uva.es/taller-introduccion-a-react-native/
+Resources and three demos to start to play with React Native both android and iOS.
 
-- [Requisitos](https://github.com/patoroco/react-native-workshop/wiki/Requisitos) (spanish)
-- [Guión](https://github.com/patoroco/react-native-workshop/wiki/Gui%C3%B3n) (spanish)
+
+
+## Info
+
+- [Picnic Code blogpost](https://www.gui.uva.es/taller-introduccion-a-react-native/)
+- [Slides](https://speakerdeck.com/patoroco/intro-to-react-native)
+
+
+## Workshop resources
+
+### Spanish
+- [Requisitos](doc/Requirements_ES.md)
+- [Guión](doc/Guide_ES.md)
+
+
+
+## Contribution
+If you want to contribute with this 'project', you can translate to another languages to reach more people. Feel free to open a PR with that! :)
+
