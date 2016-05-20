@@ -20,29 +20,18 @@ const Sound = require('react-native-sound')
 var RNFS = require('react-native-fs')
 
 
-const sounds = [
-  {"name": "badumts", "url": "https://www.myinstants.com/media/sounds/badumtss_2.mp3", "uniq_name": "badumts.mp3"},
-  {"name": "tada", "url": "https://www.myinstants.com/media/sounds/win31.mp3", "uniq_name": "tada.mp3"},
-  {"name": "applause", "url": "https://www.myinstants.com/media/sounds/applause-tony-d.mp3", "uniq_name": "applause.mp3"},
-  {"name": "pikachu", "url": "https://www.myinstants.com/media/sounds/pickachu.mp3", "uniq_name": "pikachu.mp3"},
-]
-
-
 class Buttons extends Component {
   constructor(props) {
      super(props);
-     this.state = { sounds: sounds };
+     this.state = { sounds: [] };
    }
 
   componentDidMount() {
-    let client = new APIClient('https://httpbin.org')
-    // client.get('ip')
-    //   .then(json => this.setState({ ip: json.origin }))
-    //   .catch((error) => console.error(error))
+    let client = new APIClient('https://raw.githubusercontent.com')
 
-    // this.play(this.state.sounds[1])
-
-    // this.downloadFile()
+    client.get('patoroco/react-native-workshop/master/3Buttons/sounds.json')
+      .then(json => this.setState({ sounds: json }))
+      .catch(error => console.error(error))
   }
 
   play(soundDict) {
@@ -55,8 +44,8 @@ class Buttons extends Component {
 
 
   downloadFile(url, filename) {
-    const imagePath = RNFS.DocumentDirectoryPath + '/' + filename
-    return RNFS.downloadFile(url, imagePath)
+    const soundPath = RNFS.DocumentDirectoryPath + '/' + filename
+    return RNFS.downloadFile(url, soundPath)
   }
 
 
