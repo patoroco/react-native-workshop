@@ -12,7 +12,17 @@ import {
   View
 } from 'react-native';
 
+import APIClient from './APIClient'
+
+
 class Buttons extends Component {
+  componentDidMount() {
+    let client = new APIClient('https://httpbin.org')
+    client.get('ip')
+      .then(json => alert(json.origin))
+      .catch((error) => console.error(error))
+  }
+
   render() {
     return (
       <View style={styles.container}>
