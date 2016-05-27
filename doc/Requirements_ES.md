@@ -12,8 +12,6 @@
 # Instalación del entorno
 - [Getting Started with React Native](https://facebook.github.io/react-native/docs/getting-started.html).  
 En esta web se puede elegir iOS / Android, así como los tres sistemas operativos con soporte (Mac / Windows / Linux).
-  
-Aún así, si surge cualquier problema con la instalación, mi correo es patoroco@gmail.com para poder llevarlo todo listo al taller.
 
 
 # Primera prueba
