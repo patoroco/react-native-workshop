@@ -7,11 +7,6 @@ export default class APIClient {
          'Content-Type': 'application/json',
        }
     }
-
-    if (options != null) {
-      this.dispatch = options.dispatch
-      this.getState = options.getState
-    }
   }
 
   async get(path, params='') {
